@@ -1,0 +1,20 @@
+//Es un transpilador de JS, transforma codigo moderno de JavaScript a codigo que el navegar pueda entender
+//@babel/core -> nucle de babel para poder usarlo
+//@babel/cli -> integracion de babel para poder ejecutar comandos desde la consola
+//babel-loader -> se encarga de trabajar con webpack, webpack no entiende babel, sirve para añadirlo al                     webpack.config.js
+/* SOLO SE CARGA EN LOS presets estos modulos a entender*/
+//@babel/preset-env -> es para poder utilizar codigo de javascript moderno
+//@babel/preset-react -> se especializa en entender y transformar codigo react a js del navegador
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    //@babel/plugin-proposal-class-properties -> plugin de babel para react para poder inicializar el state de react fuera del constructor
+    "plugins": [
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
+
+//react -> es la biblioteca
+//react-dom -> es biblioteca de react para el navegador
